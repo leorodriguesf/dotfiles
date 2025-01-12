@@ -41,5 +41,8 @@
 
     ~/bin:
       path: bin
+
+    ~/.config/nvim:
+      path: nvim
 - shell:
     - [git submodule update --init --recursive, Installing submodules]
