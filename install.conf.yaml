@@ -26,5 +26,11 @@
 
     ~/.zshrc:
       path: bash/bashrc
+
+    ~/.config/tmux:
+      path: tmux
+
+    ~/.tmux.conf:
+      path: tmux/tmux.conf
 - shell:
     - [git submodule update --init --recursive, Installing submodules]
