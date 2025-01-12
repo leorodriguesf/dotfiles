@@ -44,5 +44,11 @@
 
     ~/.config/nvim:
       path: nvim
+
+    ~/.config/vscode:
+      path: vscode
+
+    ~/.vscode/extensions/extensions.json:
+      path: vscode/extensions.json
 - shell:
     - [git submodule update --init --recursive, Installing submodules]
