@@ -11,6 +11,7 @@ fi
 
 source "$XDG_CONFIG_HOME/bash/functions.bash"
 source "$XDG_CONFIG_HOME/bash/settings.bash"
+source "$XDG_CONFIG_HOME/bash/plugins.bash"
 
 if [ -f "$HOME/.bashrc_local_after" ]; then
     source "$HOME/.bashrc_local_after"

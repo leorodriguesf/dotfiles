@@ -11,6 +11,7 @@ fi
 
 source "$XDG_CONFIG_HOME/zsh/functions.zsh"
 source "$XDG_CONFIG_HOME/zsh/settings.zsh"
+source "$XDG_CONFIG_HOME/zsh/plugins.zsh"
 
 if [ -f "$HOME/.zshrc_local_after" ]; then
     source "$HOME/.zshrc_local_after"

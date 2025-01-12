@@ -32,5 +32,8 @@
 
     ~/.tmux.conf:
       path: tmux/tmux.conf
+
+    ~/.config/starship:
+      path: starship
 - shell:
     - [git submodule update --init --recursive, Installing submodules]
