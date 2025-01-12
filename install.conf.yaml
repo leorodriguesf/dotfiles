@@ -24,7 +24,7 @@
     ~/.config/bash:
       path: bash
 
-    ~/.zshrc:
+    ~/.bashrc:
       path: bash/bashrc
 
     ~/.config/tmux:
