@@ -1,1 +1,2 @@
-path_prepend $USER_BIN_HOME
+path_prepend "$HOME/bin"
+path_prepend "$HOME/.local/bin"
