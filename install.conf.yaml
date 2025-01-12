@@ -14,5 +14,11 @@
 
     ~/.config/shell:
       path: shell
+
+    ~/.config/zsh:
+      path: zsh
+
+    ~/.zshrc:
+      path: zsh/zshrc
 - shell:
     - [git submodule update --init --recursive, Installing submodules]
