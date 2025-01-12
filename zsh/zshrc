@@ -16,7 +16,3 @@ source "$XDG_CONFIG_HOME/zsh/plugins.zsh"
 if [ -f "$HOME/.zshrc_local_after" ]; then
     source "$HOME/.zshrc_local_after"
 fi
-
-if [ -f "$HOME/.zshrc_private" ]; then
-    source "$HOME/.zshrc_private"
-fi
