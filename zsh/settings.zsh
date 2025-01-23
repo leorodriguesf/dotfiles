@@ -1,6 +1,9 @@
 # Use vim style line editing in zsh
 bindkey -v
 
+# Load git completions. Don't exaclty why (https://stackoverflow.com/questions/73393101/how-to-enable-git-autocomplete-in-macos)
+autoload -Uz compinit && compinit
+
 tmux-sessionizer-widget() {
     exec </dev/tty
     exec <&1
