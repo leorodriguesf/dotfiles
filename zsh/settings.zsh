@@ -39,3 +39,12 @@ zle -N tmuxpt-widget
 bindkey -M emacs '^G' tmuxpt-widget
 bindkey -M vicmd '^G' tmuxpt-widget
 bindkey -M viins '^G' tmuxpt-widget
+
+# Persis history across sessions
+setopt APPEND_HISTORY
+setopt SHARE_HISTORY
+HISTFILE=$HOME/.zhistory
+SAVEHIST=1000
+HISTSIZE=999
+setopt HIST_EXPIRE_DUPS_FIRST
+setopt EXTENDED_HISTORY
