@@ -21,6 +21,18 @@ tmux-query-widget() {
 }
 
 zle -N tmux-query-widget
-bindkey -M emacs '^G' tmux-query-widget
-bindkey -M vicmd '^G' tmux-query-widget
-bindkey -M viins '^G' tmux-query-widget
+bindkey -M emacs '^Y' tmux-query-widget
+bindkey -M vicmd '^Y' tmux-query-widget
+bindkey -M viins '^Y' tmux-query-widget
+
+tmuxpt-widget() {
+    exec </dev/tty
+    exec <&1
+    tmuxpt
+    zle redisplay
+}
+
+zle -N tmuxpt-widget
+bindkey -M emacs '^G' tmuxpt-widget
+bindkey -M vicmd '^G' tmuxpt-widget
+bindkey -M viins '^G' tmuxpt-widget
