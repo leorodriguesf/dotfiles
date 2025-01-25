@@ -28,17 +28,17 @@ bindkey -M emacs '^Y' tmux-query-widget
 bindkey -M vicmd '^Y' tmux-query-widget
 bindkey -M viins '^Y' tmux-query-widget
 
-tmuxpt-widget() {
+tmuxgpt-widget() {
     exec </dev/tty
     exec <&1
-    tmuxpt
+    tmuxgpt
     zle redisplay
 }
 
-zle -N tmuxpt-widget
-bindkey -M emacs '^G' tmuxpt-widget
-bindkey -M vicmd '^G' tmuxpt-widget
-bindkey -M viins '^G' tmuxpt-widget
+zle -N tmuxgpt-widget
+bindkey -M emacs '^G' tmuxgpt-widget
+bindkey -M vicmd '^G' tmuxgpt-widget
+bindkey -M viins '^G' tmuxgpt-widget
 
 # Persis history across sessions
 setopt APPEND_HISTORY

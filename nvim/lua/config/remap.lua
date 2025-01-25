@@ -42,6 +42,6 @@ vim.keymap.set("n", "<leader>b", ":b#<CR>")
 
 -- Make productivity hacks available on neovim
 vim.keymap.set("n", "<C-f>", "<cmd>silent !tmux neww tmux-sessionizer<CR>")
-vim.keymap.set("n", "<C-g>", "<cmd>silent !tmuxpt<CR>")
+vim.keymap.set("n", "<C-g>", "<cmd>silent !tmuxgpt<CR>")
 vim.keymap.set("n", "<C-y>", "<cmd>silent !tmux-query<CR>")
 
