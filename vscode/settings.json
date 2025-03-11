@@ -8,5 +8,10 @@
     "editor.defaultFormatter": "foxundermoon.shell-format"
   },
 
-  "workbench.colorTheme": "Catppuccin Mocha"
+  "workbench.colorTheme": "Catppuccin Mocha",
+  "workbench.iconTheme": "vscode-jetbrains-icon-theme-2023-dark",
+
+  "[astro]": {
+    "editor.defaultFormatter": "astro-build.astro-vscode"
+  }
 }
