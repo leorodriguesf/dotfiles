@@ -9,9 +9,11 @@
   },
 
   "workbench.colorTheme": "Catppuccin Mocha",
-  "workbench.iconTheme": "vscode-jetbrains-icon-theme-2023-dark",
 
   "[astro]": {
     "editor.defaultFormatter": "astro-build.astro-vscode"
-  }
+  },
+
+  "prettier.printWidth": 80,
+  "prettier.proseWrap": "always"
 }
