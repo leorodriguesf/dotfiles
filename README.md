@@ -1,6 +1,7 @@
 [anishathalye/dotfiles]: https://github.com/anishathalye/dotfiles/tree/master
 [anishathalye/dotbot]: https://github.com/anishathalye/dotbot
 [dotfiles-local]: https://github.com/leorodriguesf/dotfiles-local
+[LICENSE]: LICENSE
 
 # Dotfiles [![Build Status](https://github.com/leorodriguesf/dotfiles/actions/workflows/ci.yaml/badge.svg)](https://github.com/leorodriguesf/dotfiles/actions/workflows/ci.yaml)
 
@@ -12,3 +13,7 @@ multiple times.
 
 The configuration for machine-specific configuration, is located in
 [dotfiles-local][dotfiles-local].
+
+## License
+
+Released under the MIT License. See [LICENSE] for details.
