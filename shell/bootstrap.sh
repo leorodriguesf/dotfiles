@@ -1,4 +1,4 @@
-path_prepend $XDG_BIN_HOME
-path_prepend $USER_BIN_HOME
+path_prepend ~/.local/bin
+path_prepend ~/.local/share/dotfiles/bin
 
 cat ~/.signature

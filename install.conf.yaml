@@ -12,7 +12,6 @@
     ~/.gitignore_global: gitignore_global
     ~/.signature: signature
 
-    ~/.bin: bin
     ~/.config/shell: shell
     ~/.config/zsh: zsh
     ~/.config/bash: bash
