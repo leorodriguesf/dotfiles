@@ -1,9 +1,10 @@
+source ~/.config/shell/functions.sh
+
 if [ -f ~/.shell_local_before ]; then
     source ~/.shell_local_before
 fi
 
 source ~/.config/shell/settings.sh
-source ~/.config/shell/functions.sh
 source ~/.config/shell/bootstrap.sh
 source ~/.config/shell/external.sh
 source ~/.config/shell/aliases.sh
