@@ -1,0 +1,26 @@
+- defaults:
+    link:
+      create: true
+      relink: true
+
+- clean: ["~", "~/.config"]
+
+- link:
+    ~/.zshrc: zshrc
+    ~/.bashrc: bashrc
+    ~/.gitconfig: gitconfig
+    ~/.gitignore_global: gitignore_global
+    ~/.signature: signature
+
+    ~/.bin: bin
+    ~/.config/shell: shell
+    ~/.config/zsh: zsh
+    ~/.config/bash: bash
+    ~/.config/starship: starship
+    ~/.config/tmux: tmux
+    ~/.config/vscode: vscode
+    ~/.config/alacritty: alacritty
+    ~/.config/nvim: nvim
+
+- shell:
+    - [git submodule update --init --recursive, Installing submodules]
