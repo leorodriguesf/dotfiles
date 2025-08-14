@@ -2,7 +2,7 @@
 [anishathalye/dotbot]: https://github.com/anishathalye/dotbot
 [dotfiles-local]: https://github.com/leorodriguesf/dotfiles-local
 
-# Dotfiles
+# Dotfiles [![Build Status](https://github.com/leorodriguesf/dotfiles/actions/workflows/ci.yaml/badge.svg)](https://github.com/leorodriguesf/dotfiles/actions/workflows/ci.yaml)
 
 > Inspired by [anishathalye/dotfiles] and powered by [anishathalye/dotbot]
 
