@@ -17,7 +17,6 @@
     ~/.config/bash: bash
     ~/.config/starship: starship
     ~/.config/tmux: tmux
-    ~/.config/vscode: vscode
     ~/.config/alacritty: alacritty
     ~/.config/nvim: nvim
 
