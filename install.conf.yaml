@@ -1,0 +1,40 @@
+- defaults:
+    link:
+      relink: true
+      create: true
+      backup: true
+
+- clean:
+    - "~"
+    - "~/.config"
+    - "~/.local/share"
+
+- create:
+    - ~/.config
+    - ~/.cache
+    - ~/.local/share
+    - ~/.local/state
+    - ~/.local/state/zsh
+    - ~/.cache/zsh
+    - ~/.cache/starship
+
+- link:
+    ~/.config/alacritty: ./.config/alacritty
+    ~/.config/starship: ./.config/starship
+    ~/.config/zsh: ./.config/zsh
+    ~/.gnupg/gpg-agent.conf:
+      if: "[ `uname` = Darwin ]"
+      path: ./.gnupg/gpg-agent.conf
+    ~/.local/bin: ./.local/bin
+    ~/.local/share/signature.asc: ./.local/share/signature.asc
+    ~/.gitconfig: ./.gitconfig
+    ~/.gitconfig_work:
+      if: '[ "${SHOULD_INSTALL_WORK_PROFILE}" = "true" ]'
+      path: ./.gitconfig_work
+    ~/.gitignore_global: ./.gitignore_global
+    /etc/zshenv:
+      if: "[ `uname` = Darwin ]"
+      path: ./zshenv
+    /etc/zsh/zshenv:
+      if: "[ `uname` = Linux ]"
+      path: ./zshenv

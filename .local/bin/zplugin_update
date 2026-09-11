@@ -1,0 +1,6 @@
+#!/usr/bin/env bash
+
+for dir in "${ZPLUGINDIR}"/*/; do
+  echo "Updating ${dir:t}..."
+  git -C "$dir" pull --ff-only
+done
