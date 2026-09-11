@@ -6,6 +6,7 @@
       backup: true
 
 - link:
+    ~/.config/aerospace: ./.config/aerospace
     /etc/zshenv: ./zshenv
     ~/.gnupg/gpg-agent.conf: ./.gnupg/gpg-agent.conf
     ~/Library/Application Support/Code/User/settings.json: ./Code/User/settings.json
