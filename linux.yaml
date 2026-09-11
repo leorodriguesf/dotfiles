@@ -1,0 +1,10 @@
+- defaults:
+    link:
+      if: "[ `uname` = Linux ]"
+
+- link:
+    /etc/zsh/zshenv: ./zshenv
+    ~/.config/Code/User/settings.json: ./Code/User/settings.json
+    ~/.config/Cursor/User/settings.json: ./Code/User/settings.json
+    ~/.config/Code/User/keybindings.json: ./Code/User/keybindings.json
+    ~/.config/Cursor/User/keybindings.json: ./Code/User/keybindings.json

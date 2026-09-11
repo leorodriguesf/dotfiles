@@ -1,0 +1,6 @@
+- defaults:
+    link:
+      if: '[ "${SHOULD_INSTALL_WORK_PROFILE}" = "true" ]'
+
+- link:
+    ~/work/.gitconfig_work: ./.gitconfig_work

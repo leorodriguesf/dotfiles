@@ -38,31 +38,7 @@
     ~/.config/starship: ./.config/starship
     ~/.config/tmux: ./.config/tmux
     ~/.config/zsh: ./.config/zsh
-    ~/.gnupg/gpg-agent.conf:
-      if: "[ `uname` = Darwin ]"
-      path: ./.gnupg/gpg-agent.conf
     ~/.local/bin: ./.local/bin
     ~/.local/share/signature.asc: ./.local/share/signature.asc
-    ~/Library/Application Support/Code/User/settings.json:
-      if: "[ `uname` = Darwin ]"
-      path: ./Code/User/settings.json
-    ~/.config/Code/User/settings.json:
-      if: "[ `uname` = Linux ]"
-      path: ./Code/User/settings.json
-    ~/Library/Application Support/Cursor/User/settings.json:
-      if: "[ `uname` = Darwin ]"
-      path: ./Code/User/settings.json
-    ~/.config/Cursor/User/settings.json:
-      if: "[ `uname` = Linux ]"
-      path: ./Code/User/settings.json
     ~/.gitconfig: ./.gitconfig
-    ~/work/.gitconfig_work:
-      if: '[ "${SHOULD_INSTALL_WORK_PROFILE}" = "true" ]'
-      path: ./.gitconfig_work
     ~/.gitignore_global: ./.gitignore_global
-    /etc/zshenv:
-      if: "[ `uname` = Darwin ]"
-      path: ./zshenv
-    /etc/zsh/zshenv:
-      if: "[ `uname` = Linux ]"
-      path: ./zshenv
