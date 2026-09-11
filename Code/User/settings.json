@@ -1,0 +1,13 @@
+{
+  "explorer.compactFolders": false,
+  "editor.formatOnSave": true,
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "prettier.printWidth": 80,
+  "editor.tabSize": 2,
+  "editor.insertSpaces": true,
+  "workbench.iconTheme": "material-icon-theme",
+  "editor.fontFamily": "'MesloLGL Nerd Font'",
+  "terminal.integrated.fontFamily": "'MesloLGL Nerd Font'",
+  "debug.console.fontFamily": "'MesloLGL Nerd Font'",
+  "workbench.colorTheme": "Catppuccin Frappé"
+}
