@@ -1,6 +1,6 @@
 [general]
 import = [
-    "~/.config/alacritty/themes/palenight.toml"
+    "~/.config/alacritty/themes/catppuccin-frappe.toml"
 ]
 
 [env]
