@@ -1,0 +1,8 @@
+#!/usr/bin/env bash
+
+if ! command -v op >/dev/null; then
+    echo "Warning: op is required but not installed. Skipping..."
+    exit 0
+fi
+
+op document get "Dotfiles private key"

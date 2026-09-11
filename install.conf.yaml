@@ -8,19 +8,34 @@
     - "~"
     - "~/.config"
     - "~/.local/share"
+    - "~/.local/bin"
 
 - create:
     - ~/.config
     - ~/.cache
+    - ~/.local/bin
     - ~/.local/share
     - ~/.local/state
     - ~/.local/state/zsh
     - ~/.cache/zsh
     - ~/.cache/starship
+    - ~/dev/active
+    - ~/dev/archive
+    - ~/dev/sandbox
+    - ~/work/repos
+    - ~/work/sandbox
+    - ~/work/notes
+    - ~/life/10-finance # Personal taxes, bank statements, investments, receipts
+    - ~/life/20-admin # Passports, medical records, apartment leases, insurance
+    - ~/life/30-media # Camera rolls, ebooks, videos (Sub-foldered by Year)
+    - ~/life/40-career # Personal resumes, portfolio assets, certifications
+    - ~/life/50-hobbies # Non-dev interests (Music, gaming, 3D printing, etc.)
+    - ~/inbox
 
 - link:
     ~/.config/alacritty: ./.config/alacritty
     ~/.config/starship: ./.config/starship
+    ~/.config/tmux: ./.config/tmux
     ~/.config/zsh: ./.config/zsh
     ~/.gnupg/gpg-agent.conf:
       if: "[ `uname` = Darwin ]"
@@ -28,7 +43,7 @@
     ~/.local/bin: ./.local/bin
     ~/.local/share/signature.asc: ./.local/share/signature.asc
     ~/.gitconfig: ./.gitconfig
-    ~/.gitconfig_work:
+    ~/work/.gitconfig_work:
       if: '[ "${SHOULD_INSTALL_WORK_PROFILE}" = "true" ]'
       path: ./.gitconfig_work
     ~/.gitignore_global: ./.gitignore_global

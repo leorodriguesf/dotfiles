@@ -1,4 +1,6 @@
 
+source "$ZDOTDIR/functions.zsh"
+
 # Define and export XDG Base Directories with official fallbacks
 export XDG_CONFIG_HOME="${XDG_CONFIG_HOME:-$HOME/.config}"
 export XDG_CACHE_HOME="${XDG_CACHE_HOME:-$HOME/.cache}"
@@ -25,5 +27,7 @@ fi
 export STARSHIP_CONFIG="$XDG_CONFIG_HOME/starship/starship.toml"
 export STARSHIP_CACHE="$XDG_CACHE_HOME/starship"
 
-export PATH="$HOME/.local/bin:$PATH"
+export NVM_DIR="$XDG_CONFIG_HOME/nvm"
+
+path_prepend "$HOME/.local/bin"
 

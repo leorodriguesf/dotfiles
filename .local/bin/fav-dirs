@@ -1,0 +1,14 @@
+#!/usr/bin/env bash
+
+FAV_DIRS=(
+    ~
+    ~/.config
+    ~/dev/active
+    ~/dev/archive
+    ~/dev/sandbox
+    ~/work/repos
+    ~/work/sandbox
+    ~/work/notes
+)
+
+find -L "${FAV_DIRS[@]}" -mindepth 1 -maxdepth 1 -type d 2>/dev/null

@@ -1,7 +1,12 @@
 # =========================================================
-# History
+# Functions that new the current shell context.
 # =========================================================
 
+source "$ZDOTDIR/functions.zsh"
+
+# =========================================================
+# History
+# =========================================================
 HISTFILE="$XDG_STATE_HOME/zsh/history"
 HISTSIZE=100000
 SAVEHIST=100000
@@ -56,15 +61,26 @@ if command -v fzf >/dev/null 2>&1; then
 fi
 
 # =========================================================
+# Node version manager
+# =========================================================
+
+# Load only nvm completions. To avoid terminal startup 
+# running slow, we lazy load nvm binary itself in 
+# lazy.zsh
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"
+
+# =========================================================
 # Modular Config Files
 # =========================================================
 
 source "$ZDOTDIR/fzf.zsh"
 source "$ZDOTDIR/aliases.zsh"
-# Bindings must be set before plugins so that custom hooks works
+# Bindings must be set before plugins so that custom hooks
+# works
 source "$ZDOTDIR/bindings.zsh"
 source "$ZDOTDIR/plugins.zsh"
 source "$ZDOTDIR/prompt.zsh"
+source "$ZDOTDIR/lazy.zsh"
 
 # Allow local customizations
 if [[ -f "$ZDOTDIR/.zshrc_local" ]]; then

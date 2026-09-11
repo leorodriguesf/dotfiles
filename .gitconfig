@@ -38,4 +38,4 @@
 
 # Allow override for work profile
 [includeIf "gitdir:~/work/"]
-  path = ~/.gitconfig_work
+  path = ~/work/.gitconfig_work
