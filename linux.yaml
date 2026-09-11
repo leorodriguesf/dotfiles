@@ -1,6 +1,9 @@
 - defaults:
     link:
       if: "[ `uname` = Linux ]"
+      relink: true
+      create: true
+      backup: true
 
 - link:
     /etc/zsh/zshenv: ./zshenv

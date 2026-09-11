@@ -1,6 +1,9 @@
 - defaults:
     link:
       if: '[ "${SHOULD_INSTALL_WORK_PROFILE}" = "true" ]'
+      relink: true
+      create: true
+      backup: true
 
 - link:
     ~/work/.gitconfig_work: ./.gitconfig_work

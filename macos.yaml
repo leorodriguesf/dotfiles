@@ -1,6 +1,9 @@
 - defaults:
     link:
       if: "[ `uname` = Darwin ]"
+      relink: true
+      create: true
+      backup: true
 
 - link:
     /etc/zshenv: ./zshenv
