@@ -36,6 +36,7 @@
     ~/.config/alacritty: ./.config/alacritty
     ~/.config/git/config: ./.config/git/config
     ~/.config/git/ignore: ./.config/git/ignore
+    ~/.npmrc: ./.config/npm/.npmrc
     ~/.config/nvim: ./.config/nvim
     ~/.config/starship: ./.config/starship
     ~/.config/tmux: ./.config/tmux

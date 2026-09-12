@@ -7,3 +7,4 @@
 
 - link:
     ~/.config/git/config_work: ./.config/git/config_work
+    ~/.npmrc: ./.config/npm/.npmrc_work
