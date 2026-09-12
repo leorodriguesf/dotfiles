@@ -5,6 +5,7 @@ zvm_after_init() {
   bindkey '^[[A' history-substring-search-up
   bindkey '^[[B' history-substring-search-down
 
+  # Create wrapper function to be used as a ZLE widget
   tmux-sessionizer-widget() {
       exec </dev/tty
       exec <&1
@@ -12,9 +13,10 @@ zvm_after_init() {
       zle redisplay
   }
 
-  # 2. Register the function as a ZLE widget
+  # Register the function as a ZLE widget
   zle -N tmux-sessionizer-widget
 
-  # 3. Bind CTRL + F to the widget
-  bindkey '^F' tmux-sessionizer-widget
+  zvm_bindkey viins '^F' tmux-sessionizer-widget
+  zvm_bindkey vicmd '^F' tmux-sessionizer-widget
+  zvm_bindkey visual '^F' tmux-sessionizer-widget
 }
