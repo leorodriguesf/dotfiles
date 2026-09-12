@@ -6,4 +6,4 @@
       backup: true
 
 - link:
-    ~/work/.gitconfig_work: ./.gitconfig_work
+    ~/work/.gitconfig_work: ./.config/git/.gitconfig_work

@@ -8,6 +8,7 @@
 - link:
     ~/.config/aerospace: ./.config/aerospace
     ~/.config/hammerspoon: ./.config/hammerspoon
+    ~/.hammerspoon: ~/.config/hammerspoon
     /etc/zshenv: ./zshenv
     ~/.gnupg/gpg-agent.conf: ./.gnupg/gpg-agent.conf
     ~/Library/Application Support/Code/User/settings.json: ./Code/User/settings.json
