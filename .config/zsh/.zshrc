@@ -26,7 +26,14 @@ setopt NOBEEP
 # sort file10 after file9, not after file1
 setopt NUMERIC_GLOB_SORT
 # Use vim style line editing in zsh
-bindkey -v 
+bindkey -v
+
+# =========================================================
+# Package manager
+# =========================================================
+if [ `uname` = Darwin ] && [ -x "/opt/homebrew/bin/brew" ];then
+  eval "$(/opt/homebrew/bin/brew shellenv)"
+fi
 
 # =========================================================
 # Smart directory navigation
