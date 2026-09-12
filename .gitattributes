@@ -1,1 +1,1 @@
-.gitconfig_work filter=git-crypt diff=git-crypt
+.config/git/config_work filter=git-crypt diff=git-crypt

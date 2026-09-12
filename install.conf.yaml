@@ -34,12 +34,12 @@
 
 - link:
     ~/.config/alacritty: ./.config/alacritty
-    ~/.config/git: ./.config/git
+    ~/.config/git/config: ./.config/git/config
+    ~/.config/git/ignore: ./.config/git/ignore
     ~/.config/nvim: ./.config/nvim
     ~/.config/starship: ./.config/starship
     ~/.config/tmux: ./.config/tmux
     ~/.config/zsh: ./.config/zsh
     ~/.local/bin: ./.local/bin
     ~/.local/share/signature.asc: ./.local/share/signature.asc
-    ~/.gitconfig: ~/.config/git/.gitconfig
     ~/.vscode/extensions/extensions.json: ./.vscode/extensions/extensions.json
