@@ -42,3 +42,4 @@
     ~/.local/share/signature.asc: ./.local/share/signature.asc
     ~/.gitconfig: ./.gitconfig
     ~/.gitignore_global: ./.gitignore_global
+    ~/.vscode/extensions/extensions.json: ./.vscode/extensions/extensions.json

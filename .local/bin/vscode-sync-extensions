@@ -1,0 +1,32 @@
+#!/usr/bin/env bash
+
+VSCODE_EXTENSIONS_FILE="$HOME/.vscode/extensions/extensions.json"
+
+if [ ! -f "$VSCODE_EXTENSIONS_FILE" ] >/dev/null; then
+    echo "Warning: $VSCODE_EXTENSIONS_FILE is required but does not exist. Skipping..."
+    exit 0
+fi
+
+if ! command -v jq >/dev/null; then
+    echo "Warning: jq is required but not installed. Skipping..."
+    exit 0
+fi
+
+if ! command -v code >/dev/null; then
+    echo "Warning: code is required but not installed. Skipping..."
+    exit 0
+fi
+
+if ! command -v cursor >/dev/null; then
+    echo "Warning: cursor is required but not installed. Skipping..."
+    exit 0
+fi
+
+# Read the file line by line directly into the loop
+jq -r '.[] | .identifier.id' "$VSCODE_EXTENSIONS_FILE" | while read -r extension; do
+    # Skip empty lines just in case
+    [[ -z "$extension" ]] && continue
+
+    code --install-extension "$extension"
+    cursor --install-extension "$extension"
+done
