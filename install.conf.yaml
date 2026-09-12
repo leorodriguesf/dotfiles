@@ -43,4 +43,8 @@
     ~/.config/zsh: ./.config/zsh
     ~/.local/bin: ./.local/bin
     ~/.local/share/signature.asc: ./.local/share/signature.asc
+    ~/.ssh/config: ./.ssh/config
+    ~/.ssh/config.private: ./.ssh/config.private
+    ~/.ssh/id_ed25519_macos_personal.pub: ./.ssh/id_ed25519_macos_personal.pub
+    ~/.ssh/id_ed25519_macos_personal: ./.ssh/id_ed25519_macos_personal
     ~/.vscode/extensions/extensions.json: ./.vscode/extensions/extensions.json
