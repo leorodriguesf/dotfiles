@@ -33,7 +33,7 @@
     - ~/inbox
 
 - link:
-    ~/.config/alacritty: ./.config/alacritty
+    ~/.config/ghostty: ./.config/ghostty
     ~/.config/git/config: ./.config/git/config
     ~/.config/git/ignore: ./.config/git/ignore
     ~/.npmrc: ./.config/npm/.npmrc

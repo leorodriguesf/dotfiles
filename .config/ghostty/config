@@ -1,0 +1,10 @@
+theme = "Catppuccin Frappe"
+
+background-opacity = 0.85
+background-blur = true
+
+font-family = "MesloLGL Nerd Font"
+font-size = 12
+
+custom-shader = /Users/leorodriguesf95/dotfiles/.config/ghostty/shaders/cursor_smear.glsl
+custom-shader-animation = always
