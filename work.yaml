@@ -8,5 +8,27 @@
 - link:
     ~/.config/git/config_work: ./.config/git/config_work
     ~/.npmrc: ./.config/npm/.npmrc_work
-    ~/.ssh/id_rsa_macos_work.pub: ./.ssh/id_rsa_macos_work.pub
-    ~/.ssh/id_rsa_macos_work: ./.ssh/id_rsa_macos_work
+
+- shell:
+    - description: "Copy SSH keys"
+      quiet: true
+      command: |
+        if [ "${SHOULD_INSTALL_WORK_PROFILE}" != "true" ]; then
+          exit 0
+        fi
+
+        if [ ! -f ~/.ssh/id_rsa_macos_work ]; then
+          cp ./.ssh/id_rsa_macos_work ~/.ssh/id_rsa_macos_work
+        fi
+        if [ ! -f ~/.ssh/id_rsa_macos_work.pub ]; then
+          cp ./.ssh/id_rsa_macos_work.pub ~/.ssh/id_rsa_macos_work.pub
+        fi
+    - description: "Change SSH key permissions"
+      quiet: true
+      command: |
+        if [ "${SHOULD_INSTALL_WORK_PROFILE}" != "true" ]; then
+          exit 0
+        fi
+
+        chmod 600 ~/.ssh/id_rsa_macos_work
+        chmod 644 ~/.ssh/id_rsa_macos_work.pub

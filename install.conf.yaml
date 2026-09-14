@@ -32,6 +32,10 @@
     - ~/life/50-hobbies # Non-dev interests (Music, gaming, 3D printing, etc.)
     - ~/inbox
 
+- create:
+    ~/.ssh:
+      mode: 0700
+
 - link:
     ~/.config/ghostty: ./.config/ghostty
     ~/.config/git/config: ./.config/git/config
@@ -43,8 +47,29 @@
     ~/.config/zsh: ./.config/zsh
     ~/.local/bin: ./.local/bin
     ~/.local/share/signature.asc: ./.local/share/signature.asc
-    ~/.ssh/config: ./.ssh/config
-    ~/.ssh/config.private: ./.ssh/config.private
-    ~/.ssh/id_ed25519_macos_personal.pub: ./.ssh/id_ed25519_macos_personal.pub
-    ~/.ssh/id_ed25519_macos_personal: ./.ssh/id_ed25519_macos_personal
     ~/.vscode/extensions/extensions.json: ./.vscode/extensions/extensions.json
+
+- shell:
+    - description: "Copy SSH keys and config"
+      quiet: true
+      command: |
+        if [ ! -f ~/.ssh/id_ed25519_macos_personal ]; then
+          cp ./.ssh/id_ed25519_macos_personal ~/.ssh/id_ed25519_macos_personal
+        fi
+        if [ ! -f ~/.ssh/id_ed25519_macos_personal.pub ]; then
+          cp ./.ssh/id_ed25519_macos_personal.pub ~/.ssh/id_ed25519_macos_personal.pub
+        fi
+    - description: "Copy SSH config"
+      quiet: true
+      command: |
+        if [ ! -f ~/.ssh/config ]; then
+          cp ./.ssh/config ~/.ssh/config
+        fi
+        if [ ! -f ~/.ssh/config.private ]; then
+          cp ./.ssh/config.private ~/.ssh/config.private
+        fi
+    - description: "Change SSH key permissions"
+      quiet: true
+      command: |
+        chmod 600 ~/.ssh/{id_ed25519_macos_personal,config,config.private}
+        chmod 644 ~/.ssh/id_ed25519_macos_personal.pub

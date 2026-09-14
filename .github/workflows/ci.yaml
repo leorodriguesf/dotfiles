@@ -3,7 +3,7 @@ on:
   push:
   pull_request:
 jobs:
-  build:
+  install-dotifles:
     strategy:
       matrix:
         os: [macos-latest, ubuntu-latest]
@@ -11,4 +11,13 @@ jobs:
     steps:
       - uses: actions/checkout@v2
       - run: |
-          sudo ./install
+          SHOULD_INSTALL_WORK_PROFILE=true ./install
+  install-dotifles-work-profile:
+    strategy:
+      matrix:
+        os: [macos-latest, ubuntu-latest]
+    runs-on: ${{ matrix.os }}
+    steps:
+      - uses: actions/checkout@v2
+      - run: |
+          SHOULD_INSTALL_WORK_PROFILE=true ./install
