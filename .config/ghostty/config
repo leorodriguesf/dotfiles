@@ -6,5 +6,5 @@ background-blur = true
 font-family = "MesloLGL Nerd Font"
 font-size = 12
 
-custom-shader = /Users/leorodriguesf95/dotfiles/.config/ghostty/shaders/cursor_smear.glsl
+custom-shader = ~/.config/ghostty/shaders/cursor_smear.glsl
 custom-shader-animation = always
