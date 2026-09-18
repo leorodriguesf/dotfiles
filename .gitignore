@@ -1,4 +1,6 @@
 .local/bin/claude
 .local/bin/ai-memory
 .local/bin/codex*
+.local/bin/agent
+.local/bin/cursor-agent
 .config/hammerspoon/Spoons
