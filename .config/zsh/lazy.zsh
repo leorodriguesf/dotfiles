@@ -1,6 +1,6 @@
 _lazy_load_nvm() {
   # Unset the placeholders so they aren't called in an infinite loop
-  unset -f nvm node npm npx yarn
+  unset -f nvm node npm npx yarn pnpm
 
   # Load NVM and its autocomplete definitions
   [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
@@ -12,3 +12,4 @@ node() { _lazy_load_nvm; node "$@"; }
 npm()  { _lazy_load_nvm; npm "$@"; }
 npx()  { _lazy_load_nvm; npx "$@"; }
 yarn() { _lazy_load_nvm; yarn "$@"; }
+pnpm() { _lazy_load_nvm; pnpm "$@"; }
