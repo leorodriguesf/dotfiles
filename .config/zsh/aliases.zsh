@@ -56,3 +56,9 @@ alias df='df -h'
 alias -- -='cd -'
 
 alias vim='nvim';
+
+if command -v ai-memory >/dev/null 2>&1; then
+  alias claude='ai-memory run claude'
+  alias opencode='ai-memory run opencode'
+  alias codex='ai-memory run codex'
+fi

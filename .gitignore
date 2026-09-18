@@ -1,3 +1,4 @@
-.config/zsh/plugins
-.config/zsh/.zshrc_local
 .local/bin/claude
+.local/bin/ai-memory
+.local/bin/codex*
+.config/hammerspoon/Spoons

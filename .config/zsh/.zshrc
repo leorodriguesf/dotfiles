@@ -94,6 +94,8 @@ if [ $(uname) = "Darwin" ] && command -v brew >/dev/null 2>&1; then
   path_prepend "$JAVA_HOME/bin"
 fi
 
+path_append "$HOME/.opencode/bin"
+
 # =========================================================
 # Allow local overrides. Kept at the bottom on purpose.
 # =========================================================

@@ -1,0 +1,22 @@
+#!/usr/bin/env bash
+
+if ! command -v ai-memory >/dev/null 2>&1; then
+  echo "Warning: ai-memory is required but not installed. Skipping..."
+  exit 0
+fi
+
+if ! command -v docker >/dev/null 2>&1; then
+  echo "Warning: docker is required but not installed. Skipping..."
+  exit 0
+fi
+
+if docker ps | grep -q "ai-memory"; then
+  echo "ai-memory is already running. Skipping..."
+  exit 0
+fi
+
+docker run -d --name ai-memory \
+    --restart unless-stopped \
+    -p 127.0.0.1:49374:49374 \
+    -v ai-memory-data:/data \
+    docker.io/akitaonrails/ai-memory:latest serve --transport http --bind 0.0.0.0:49374 --enable-web >/dev/null 2>&1
