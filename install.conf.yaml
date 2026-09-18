@@ -45,7 +45,17 @@
     ~/.config/nvim: ./.config/nvim
     ~/.config/starship: ./.config/starship
     ~/.config/tmux: ./.config/tmux
-    ~/.config/zsh: ./.config/zsh
+
+    ~/.config/zsh/.zshenv: ./.config/zsh/.zshenv
+    ~/.config/zsh/.zshrc: ./.config/zsh/.zshrc
+    ~/.config/zsh/aliases.zsh: ./.config/zsh/aliases.zsh
+    ~/.config/zsh/bindings.zsh: ./.config/zsh/bindings.zsh
+    ~/.config/zsh/functions.zsh: ./.config/zsh/functions.zsh
+    ~/.config/zsh/fzf.zsh: ./.config/zsh/fzf.zsh
+    ~/.config/zsh/lazyload.zsh: ./.config/zsh/lazyload.zsh
+    ~/.config/zsh/plugins.zsh: ./.config/zsh/plugins.zsh
+    ~/.config/zsh/prompt.zsh: ./.config/zsh/prompt.zsh
+
     ~/.local/bin: ./.local/bin
     ~/.local/share/signature.asc: ./.local/share/signature.asc
     ~/.vscode/extensions/extensions.json: ./.vscode/extensions/extensions.json

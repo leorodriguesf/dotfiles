@@ -8,6 +8,7 @@
 - link:
     ~/.config/git/config_work: ./.config/git/config_work
     ~/.npmrc: ./.config/npm/.npmrc_work
+    ~/.config/zsh/work.zsh: ./.config/zsh/work.zsh
 
 - shell:
     - description: "Copy SSH keys"

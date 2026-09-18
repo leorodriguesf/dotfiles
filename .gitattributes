@@ -3,3 +3,4 @@
 .ssh/id_ed25519_macos_personal filter=git-crypt diff=git-crypt
 .ssh/id_rsa_macos_work filter=git-crypt diff=git-crypt
 .ssh/config.private filter=git-crypt diff=git-crypt
+.config/zsh/work.zsh filter=git-crypt diff=git-crypt

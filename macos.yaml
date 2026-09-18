@@ -9,9 +9,13 @@
     ~/.config/aerospace: ./.config/aerospace
     ~/.config/hammerspoon: ./.config/hammerspoon
     ~/.hammerspoon: ~/.config/hammerspoon
+
     /etc/zshenv: ./zshenv
+
     ~/.gnupg/gpg-agent.conf: ./.gnupg/gpg-agent.conf
+
     ~/Library/Application Support/Code/User/settings.json: ./Code/User/settings.json
     ~/Library/Application Support/Cursor/User/settings.json: ./Code/User/settings.json
+
     ~/Library/Application Support/Code/User/keybindings.json: ./Code/User/keybindings.json
     ~/Library/Application Support/Cursor/User/keybindings.json: ./Code/User/keybindings.json

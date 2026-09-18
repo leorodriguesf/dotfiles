@@ -71,9 +71,9 @@ fi
 # Node version manager
 # =========================================================
 
-# Load only nvm completions. To avoid terminal startup 
-# running slow, we lazy load nvm binary itself in 
-# lazy.zsh
+# Load only nvm completions. To avoid terminal startup
+# running slow, we lazy load nvm binary itself in
+# lazyload.zsh
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"
 
 # =========================================================
@@ -87,9 +87,21 @@ source "$ZDOTDIR/aliases.zsh"
 source "$ZDOTDIR/bindings.zsh"
 source "$ZDOTDIR/plugins.zsh"
 source "$ZDOTDIR/prompt.zsh"
-source "$ZDOTDIR/lazy.zsh"
+source "$ZDOTDIR/lazyload.zsh"
 
-# Allow local customizations
+if [ $(uname) = "Darwin" ] && command -v brew >/dev/null 2>&1; then
+  export JAVA_HOME="$(brew --prefix openjdk@21)"
+  path_prepend "$JAVA_HOME/bin"
+fi
+
+# =========================================================
+# Allow local overrides. Kept at the bottom on purpose.
+# =========================================================
+
+if [[ -f "$ZDOTDIR/work.zsh" ]]; then
+  source "$ZDOTDIR/work.zsh"
+fi
+
 if [[ -f "$ZDOTDIR/.zshrc_local" ]]; then
   # Ignore `cat`` alias with double quotes
   "cat" "$ZDOTDIR/.zshrc_local"
