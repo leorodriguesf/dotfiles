@@ -13,6 +13,15 @@ git -C "${DOTBOT_DIR}" submodule sync --quiet --recursive
 git submodule update --init --recursive "${DOTBOT_DIR}"
 
 "${BASEDIR}/${DOTBOT_DIR}/${DOTBOT_BIN}" -d "${BASEDIR}" -c "${CONFIG}" "${@}"
-sudo "${BASEDIR}/${DOTBOT_DIR}/${DOTBOT_BIN}" -d "${BASEDIR}" -c macos.yaml "${@}"
-sudo "${BASEDIR}/${DOTBOT_DIR}/${DOTBOT_BIN}" -d "${BASEDIR}" -c linux.yaml "${@}"
-"${BASEDIR}/${DOTBOT_DIR}/${DOTBOT_BIN}" -d "${BASEDIR}" -c work.yaml "${@}"
+
+if [ $(uname) == "Darwin" ]; then
+  # Sudo required because we make some symlinks to the system directories
+  sudo "${BASEDIR}/${DOTBOT_DIR}/${DOTBOT_BIN}" -d "${BASEDIR}" -c macos.yaml "${@}"
+elif [ $(uname) == "Linux" ]; then
+  # Sudo required because we make some symlinks to the system directories
+  sudo "${BASEDIR}/${DOTBOT_DIR}/${DOTBOT_BIN}" -d "${BASEDIR}" -c linux.yaml "${@}"
+fi
+
+if [ "${SHOULD_INSTALL_WORK_PROFILE}" == "true" ]; then
+  "${BASEDIR}/${DOTBOT_DIR}/${DOTBOT_BIN}" -d "${BASEDIR}" -c work.yaml "${@}"
+fi

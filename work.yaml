@@ -1,6 +1,5 @@
 - defaults:
     link:
-      if: '[ "${SHOULD_INSTALL_WORK_PROFILE}" = "true" ]'
       relink: true
       create: true
       backup: true
@@ -14,18 +13,10 @@
     - description: "Copy SSH keys"
       quiet: true
       command: |
-        if [ "${SHOULD_INSTALL_WORK_PROFILE}" != "true" ]; then
-          exit 0
-        fi
-
         cp -n ./.ssh/id_rsa_macos_work ~/.ssh/id_rsa_macos_work || true
         cp -n ./.ssh/id_rsa_macos_work.pub ~/.ssh/id_rsa_macos_work.pub || true
     - description: "Change SSH key permissions"
       quiet: true
       command: |
-        if [ "${SHOULD_INSTALL_WORK_PROFILE}" != "true" ]; then
-          exit 0
-        fi
-
         chmod 600 ~/.ssh/id_rsa_macos_work
         chmod 644 ~/.ssh/id_rsa_macos_work.pub
